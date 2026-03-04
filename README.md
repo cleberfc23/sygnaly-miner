@@ -1,26 +1,32 @@
-# Citizen Signals Miner  
-![Status](https://img.shields.io/badge/status-active%20development-yellow?style=for-the-badge)   
-An exploration of citizen feedback patterns using public data from Poland's national open data portal.
+# Public Signals Miner  
+![Status](https://img.shields.io/badge/status-active%20development-yellow?style=for-the-badge)
+
+An exploration of how machine learning can discover meaningful signals in large collections of public text.
 
 ## The Problem
 
-Public institutions receive thousands of citizen reports about infrastructure, transportation, safety, and public services. Most of this information arrives as free text, making large scale analysis slow and difficult.
+Large volumes of public text contain valuable information about events, trends, and emerging issues.  
+However, extracting structure from thousands of documents is difficult without automated analysis.
 
 ## The Approach
 
-This project explores how machine learning can transform raw textual reports into structured signals by creating semantic representations and discovering recurring themes through clustering.
+This project explores how machine learning can transform raw text into structured signals by creating semantic representations and discovering recurring themes through unsupervised clustering.
 
 ## Engineering Focus
 
-The goal is to build a clear and reproducible machine learning workflow that evolves from data exploration to a deployable system with testing, automation, and containerized environments.
+The goal is to build a clear and reproducible machine learning workflow that evolves from data exploration into a deployable system with testing, automation, and containerized environments.
 
 ## Impact
 
-By uncovering patterns in large collections of citizen feedback, organizations can better understand community issues and prioritize actions based on real signals from the public.
+By uncovering patterns in large text collections, organizations can better understand emerging topics and hidden structures in public information streams.
 
-## Data Source
+## Dataset
 
-This project uses publicly available citizen complaint records from the Polish national open data portal.
+The methodology is demonstrated using a corpus of Polish news articles containing:
+
+- **248,123 documents**
+- **4 fields:** `title`, `headline`, `content`, `link`
+- full article text written in Polish
 
 Dataset source:  
-https://dane.gov.pl/en/dataset/3514,rejestr-skarg-i-wnioskow
+https://huggingface.co/datasets/WiktorS/polish-news
