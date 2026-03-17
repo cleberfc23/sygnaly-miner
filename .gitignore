@@ -210,8 +210,5 @@ __marimo__/
 #
 data/*
 
-#
-notebooks/*
-
 # polish news
 polish-news/*
