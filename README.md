@@ -30,3 +30,16 @@ The methodology is demonstrated using a corpus of Polish news articles containin
 
 Dataset source:  
 https://huggingface.co/datasets/WiktorS/polish-news
+
+## Current Progress
+
+The initial data exploration and preprocessing phase has been completed.
+
+- Created a **3,000-sample development dataset** (~1.21% of total)
+- Selected `content` as the primary field for NLP analysis
+- Removed missing, empty, and duplicate entries
+- Applied initial text cleaning to eliminate boilerplate patterns
+- Filtered low-quality documents (<100 characters)
+- Final dataset: **2,890 high-quality documents (~96.3% retained)**
+
+This cleaned dataset establishes a reliable foundation for the next stages of the pipeline, including vectorization and clustering.
