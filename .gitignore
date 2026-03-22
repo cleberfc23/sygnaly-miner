@@ -208,7 +208,10 @@ marimo/_lsp/
 __marimo__/
 
 #
-data/*
+data/dev/
+data/processed/
+data/raw/
+
 
 # polish news
 polish-news/*
