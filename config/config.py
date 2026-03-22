@@ -1,4 +1,3 @@
 
-
-
 RANDOM_STATE = 48
+N_CLUSTERS = 8
