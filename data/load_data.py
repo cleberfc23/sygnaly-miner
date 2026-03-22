@@ -1,9 +1,9 @@
 from dotenv import load_dotenv
 import os
 import pandas as pd
-load_dotenv()
-ROOT = os.getenv("PROJECT_ROOT")
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "dev" / "sygnaly_dev_clean_3000.csv"
 
 def load_data():
-    path = f'{ROOT}/data/dev/sygnaly_dev_clean_3000.csv'
-    return pd.read_csv(path)
+    return pd.read_csv(DATA_PATH)
