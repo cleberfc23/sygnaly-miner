@@ -14,21 +14,24 @@ st.set_page_config(
     page_title="Sygnały Miner",
     layout="wide"
 )
+#
+st.title("Sygnały Miner")
+st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
 
 
-dataframe = load_data()
+# dataframe = load_data()
 
-X_content_vectorized, vectorizer = build_bow(dataframe['content'])
+# X_content_vectorized, vectorizer = build_bow(dataframe['content'])
 
-kmeans, labels = run_kmeans(X_content_vectorized, N_CLUSTERS)
+# kmeans, labels = run_kmeans(X_content_vectorized, N_CLUSTERS)
 
-dataframe['cluster'] = labels
+# dataframe['cluster'] = labels
 
-inertia, silhouette_mean, silhouette_std = compute_metrics(
-    X_content_vectorized, labels, kmeans)
+# inertia, silhouette_mean, silhouette_std = compute_metrics(
+#     X_content_vectorized, labels, kmeans)
 
-fig_word_cloud, fig_top_words, fig_cluster = build_figures(
-    dataframe, X_content_vectorized)
+# fig_word_cloud, fig_top_words, fig_cluster = build_figures(
+#     dataframe, X_content_vectorized)
 
-build_ui(dataframe, inertia, silhouette_mean, silhouette_std,
-         fig_word_cloud, fig_cluster, fig_top_words)
+# build_ui(dataframe, inertia, silhouette_mean, silhouette_std,
+#          fig_word_cloud, fig_cluster, fig_top_words)
