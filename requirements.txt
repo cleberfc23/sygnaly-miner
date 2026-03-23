@@ -5,6 +5,7 @@ appnope==0.1.4
 asgiref==3.11.1
 asttokens==3.0.1
 attrs==26.1.0
+beautifulsoup4==4.14.3
 blinker==1.9.0
 cachetools==7.0.5
 certifi==2026.2.25
@@ -21,6 +22,7 @@ fastjsonschema==2.21.2
 filelock==3.25.0
 fonttools==4.62.1
 fsspec==2026.2.0
+gdown==5.2.1
 gitdb==4.0.12
 GitPython==3.1.46
 h11==0.16.0
@@ -70,6 +72,7 @@ pyarrow==23.0.1
 pydeck==0.9.1
 Pygments==2.19.2
 pyparsing==3.3.2
+PySocks==1.7.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 python-multipart==0.0.22
@@ -90,6 +93,7 @@ shiny==1.5.1
 shinychat==0.2.9
 six==1.17.0
 smmap==5.0.3
+soupsieve==2.8.3
 stack-data==0.6.3
 starlette==0.52.1
 streamlit==1.55.0
