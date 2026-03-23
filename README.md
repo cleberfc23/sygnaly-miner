@@ -40,6 +40,9 @@ https://huggingface.co/datasets/WiktorS/polish-news
 - Cluster distribution  
 - Top terms per cluster  
 
+## 🌐 Live Demo
+https://sygnaly-miner.streamlit.app/
+
 ## Key Insight
 
 The baseline shows **low cluster separability (silhouette ≈ 0.07)**, indicating that Bag-of-Words is insufficient for capturing semantic structure.
