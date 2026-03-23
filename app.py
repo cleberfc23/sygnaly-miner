@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide"
 )
 #
-st.title("Sygnały Miner")
+st.title("Sygnały Miner  - -TEST-TESTT-TEST")
 st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
 
 
