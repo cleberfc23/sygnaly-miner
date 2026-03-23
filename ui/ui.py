@@ -219,11 +219,11 @@ def render_metrics(inertia, silhouette, silhouette_std):
 def render_charts(fig_cluster_dist, fig_pca, fig_top_words):
     st.subheader("Visualizations")
 
-    st.plotly_chart(fig_cluster_dist, use_container_width=True)
+    st.plotly_chart(fig_cluster_dist, width=True)
     st.divider()
-    st.plotly_chart(fig_top_words, use_container_width=True)
+    st.plotly_chart(fig_top_words, width=True)
     st.divider()
-    st.plotly_chart(fig_pca, use_container_width=True)
+    st.plotly_chart(fig_pca, width=True)
     st.divider()
 
 
