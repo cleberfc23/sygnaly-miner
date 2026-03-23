@@ -232,6 +232,6 @@ def build_ui(df, inertia, silhouette_mean, silhouette_std, fig_cluster_dist, fig
     render_header()
     render_dataset_info(df)
     st.divider()
-    render_metrics(inertia, silhouette_mean, silhouette_std)
+    # render_metrics(inertia, silhouette_mean, silhouette_std)
     st.divider()
-    render_charts(fig_cluster_dist, fig_pca, fig_top_words)
+    # render_charts(fig_cluster_dist, fig_pca, fig_top_words)
