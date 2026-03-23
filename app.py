@@ -21,7 +21,7 @@ st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
 
 dataframe = load_data()
 
-# X_content_vectorized, vectorizer = build_bow(dataframe['content'])
+X_content_vectorized, vectorizer = build_bow(dataframe['content'])
 
 # kmeans, labels = run_kmeans(X_content_vectorized, N_CLUSTERS)
 
