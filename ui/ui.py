@@ -169,11 +169,11 @@ def build_cluster(dataframe, X):
 # --------------------------------------------------------------------------------------------------------------------
 def build_figures(dataframe, X):
     all_words = ' '.join([text for text in dataframe['content']])
-    # fig_cluster = build_cluster(dataframe, X)
+    fig_cluster = build_cluster(dataframe, X)
     fig_top_words = build_top_words(all_words)
     fig_word_cloud = build_word_cloud(all_words)
-    # return fig_word_cloud, fig_top_words, fig_cluster
-    return fig_word_cloud, fig_top_words, []
+    return fig_word_cloud, fig_top_words, fig_cluster
+    # return fig_word_cloud, fig_top_words, []
 # --------------------------------------------------------------------------------------------------------------------
 
 
