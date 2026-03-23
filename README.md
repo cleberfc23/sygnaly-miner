@@ -10,36 +10,48 @@ However, extracting structure from thousands of documents is difficult without a
 
 ## The Approach
 
-This project explores how machine learning can transform raw text into structured signals by creating semantic representations and discovering recurring themes through unsupervised clustering.
+This project transforms raw text into structured signals using unsupervised learning, combining vector representations with clustering to identify recurring themes.
 
 ## Engineering Focus
 
-The goal is to build a clear and reproducible machine learning workflow that evolves from data exploration into a deployable system with testing, automation, and containerized environments.
-
-## Impact
-
-By uncovering patterns in large text collections, organizations can better understand emerging topics and hidden structures in public information streams.
+Building a clear, reproducible ML workflow evolving from data exploration into a modular and deployable system.
 
 ## Dataset
 
-The methodology is demonstrated using a corpus of Polish news articles containing:
+- **248,123 documents** (Polish news corpus)
+- Fields: `title`, `headline`, `content`, `link`
+- Development subset: **3,000 documents**
+- Final cleaned dataset: **2,890 documents (~96.3% retained)**
 
-- **248,123 documents**
-- **4 fields:** `title`, `headline`, `content`, `link`
-- full article text written in Polish
-
-Dataset source:  
+Source:  
 https://huggingface.co/datasets/WiktorS/polish-news
 
-## Current Progress
+## Baseline Pipeline
 
-The initial data exploration and preprocessing phase has been completed.
+- **Vectorization:** CountVectorizer  
+- **Clustering:** KMeans (k = 8, empirically chosen)  
+- **Evaluation:**  
+  - Inertia  
+  - Silhouette Score: **0.07**  
 
-- Created a **3,000-sample development dataset** (~1.21% of total)
-- Selected `content` as the primary field for NLP analysis
-- Removed missing, empty, and duplicate entries
-- Applied initial text cleaning to eliminate boilerplate patterns
-- Filtered low-quality documents (<100 characters)
-- Final dataset: **2,890 high-quality documents (~96.3% retained)**
+## Visualizations
 
-This cleaned dataset establishes a reliable foundation for the next stages of the pipeline, including vectorization and clustering.
+- PCA projection of clusters  
+- Cluster distribution  
+- Top terms per cluster  
+
+## Key Insight
+
+The baseline shows **low cluster separability (silhouette ≈ 0.07)**, indicating that Bag-of-Words is insufficient for capturing semantic structure.
+
+## Current Status
+
+- End-to-end baseline pipeline implemented  
+- Clustering, evaluation, and visualization completed  
+- Streamlit app under development  
+
+## Next Steps
+
+- Introduce TF-IDF and semantic embeddings  
+- Improve clustering quality  
+- Deploy interactive application  
