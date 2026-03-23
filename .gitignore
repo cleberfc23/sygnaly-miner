@@ -217,3 +217,4 @@ polish-news/*
 
 # container
 .devcontainer
+.devcontainer/
