@@ -227,7 +227,7 @@ def render_charts(fig_cluster_dist, fig_pca, fig_top_words):
     st.divider()
 
 
-
+@st.cache_resource
 def build_ui(df, inertia, silhouette_mean, silhouette_std, fig_cluster_dist, fig_pca, fig_top_words):
     render_header()
     render_dataset_info(df)

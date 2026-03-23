@@ -16,7 +16,6 @@ st.set_page_config(
 )
 
 
-
 dataframe = load_data()
 
 X_content_vectorized, vectorizer = build_bow(dataframe['content'])
