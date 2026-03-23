@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide"
 )
 #
-st.title("Sygnały Miner  - -TEST-TESTT-TEST - compute_metrics")
+st.title("Sygnały Miner  - -TEST-TESTT-TEST - build_figures")
 st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
 
 
@@ -30,8 +30,8 @@ dataframe['cluster'] = labels
 inertia, silhouette_mean, silhouette_std = compute_metrics(
     X_content_vectorized, labels, kmeans)
 
-# fig_word_cloud, fig_top_words, fig_cluster = build_figures(
-#     dataframe, X_content_vectorized)
+fig_word_cloud, fig_top_words, fig_cluster = build_figures(
+    dataframe, X_content_vectorized)
 
 # build_ui(dataframe, inertia, silhouette_mean, silhouette_std,
 #          fig_word_cloud, fig_cluster, fig_top_words)
