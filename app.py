@@ -7,6 +7,15 @@ from config.config import N_CLUSTERS
 from IPython.display import display
 import numpy as np
 from data.load_data import load_data
+import streamlit as st
+
+
+st.set_page_config(
+    page_title="Sygnały Miner",
+    layout="wide"
+)
+
+
 
 dataframe = load_data()
 
