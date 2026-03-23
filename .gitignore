@@ -208,10 +208,12 @@ marimo/_lsp/
 __marimo__/
 
 #
-data/dev/
-data/processed/
-data/raw/
-
+data/*
+data/dev/*
+data/
 
 # polish news
 polish-news/*
+
+# container
+.devcontainer
