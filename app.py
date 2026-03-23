@@ -10,13 +10,13 @@ from data.load_data import load_data
 import streamlit as st
 
 
-st.set_page_config(
-    page_title="Sygnały Miner",
-    layout="wide"
-)
-#
-st.title("Sygnały Miner  - -TEST-TESTT-TEST - build_figures - fig_cluster")
-st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
+# st.set_page_config(
+#     page_title="Sygnały Miner",
+#     layout="wide"
+# )
+# #
+# st.title("Sygnały Miner  - -TEST-TESTT-TEST - build_figures - fig_cluster")
+# st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
 
 
 dataframe = load_data()
@@ -33,5 +33,5 @@ inertia, silhouette_mean, silhouette_std = compute_metrics(
 fig_word_cloud, fig_top_words, fig_cluster = build_figures(
     dataframe, X_content_vectorized)
 
-# build_ui(dataframe, inertia, silhouette_mean, silhouette_std,
-#          fig_word_cloud, fig_cluster, fig_top_words)
+build_ui(dataframe, inertia, silhouette_mean, silhouette_std,
+         fig_word_cloud, fig_cluster, fig_top_words)

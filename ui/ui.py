@@ -6,6 +6,8 @@ import nltk
 from nltk import tokenize
 import pandas as pd
 from sklearn.decomposition import PCA
+from sklearn.decomposition import TruncatedSVD
+
 
 
 def build_word_cloud(all_words):
@@ -106,14 +108,17 @@ def build_cluster(dataframe, X):
     # pca = PCA(n_components=2)
     # X_reduced = pca.fit_transform(X.toarray())
 
-    sample_size = min(1000, X.shape[0])
-    indices = np.random.choice(X.shape[0], sample_size, replace=False)
+    svd = TruncatedSVD(n_components=2, random_state=48)
+    X_reduced = svd.fit_transform(X)
 
-    X_sample = X[indices].toarray()
-    df_sample = dataframe.iloc[indices]
+    # sample_size = min(1000, X.shape[0])
+    # indices = np.random.choice(X.shape[0], sample_size, replace=False)
 
-    pca = PCA(n_components=2)
-    X_reduced = pca.fit_transform(X_sample)
+    # X_sample = X[indices].toarray()
+    # df_sample = dataframe.iloc[indices]
+
+    # pca = PCA(n_components=2)
+    # X_reduced = pca.fit_transform(X_sample)
 
     fig = px.scatter(
         x=X_reduced[:, 0],
@@ -230,15 +235,15 @@ def render_metrics(inertia, silhouette, silhouette_std):
 def render_charts(fig_cluster_dist, fig_pca, fig_top_words):
     st.subheader("Visualizations")
 
-    st.plotly_chart(fig_cluster_dist, width=True)
+    st.plotly_chart(fig_cluster_dist, use_container_width=True)
     st.divider()
-    st.plotly_chart(fig_top_words, width=True)
+    st.plotly_chart(fig_top_words, use_container_width=True)
     st.divider()
-    st.plotly_chart(fig_pca, width=True)
+    st.plotly_chart(fig_pca, use_container_width=True)
     st.divider()
 
 
-@st.cache_resource
+# @st.cache_resource
 def build_ui(df, inertia, silhouette_mean, silhouette_std, fig_cluster_dist, fig_pca, fig_top_words):
     render_header()
     render_dataset_info(df)
