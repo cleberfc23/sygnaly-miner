@@ -19,7 +19,7 @@ st.title("Sygnały Miner")
 st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
 
 
-# dataframe = load_data()
+dataframe = load_data()
 
 # X_content_vectorized, vectorizer = build_bow(dataframe['content'])
 
