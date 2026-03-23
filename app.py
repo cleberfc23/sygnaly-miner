@@ -15,7 +15,7 @@ st.set_page_config(
     layout="wide"
 )
 #
-st.title("Sygnały Miner  - -TEST-TESTT-TEST - run_kmeans")
+st.title("Sygnały Miner  - -TEST-TESTT-TEST - compute_metrics")
 st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
 
 
@@ -25,7 +25,7 @@ X_content_vectorized, vectorizer = build_bow(dataframe['content'])
 
 kmeans, labels = run_kmeans(X_content_vectorized, N_CLUSTERS)
 
-# dataframe['cluster'] = labels
+dataframe['cluster'] = labels
 
 # inertia, silhouette_mean, silhouette_std = compute_metrics(
 #     X_content_vectorized, labels, kmeans)
