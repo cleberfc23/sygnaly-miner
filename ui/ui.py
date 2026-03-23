@@ -103,8 +103,17 @@ def build_top_words(all_words):
 
 
 def build_cluster(dataframe, X):
+    # pca = PCA(n_components=2)
+    # X_reduced = pca.fit_transform(X.toarray())
+
+    sample_size = min(1000, X.shape[0])
+    indices = np.random.choice(X.shape[0], sample_size, replace=False)
+
+    X_sample = X[indices].toarray()
+    df_sample = dataframe.iloc[indices]
+
     pca = PCA(n_components=2)
-    X_reduced = pca.fit_transform(X.toarray())
+    X_reduced = pca.fit_transform(X_sample)
 
     fig = px.scatter(
         x=X_reduced[:, 0],
@@ -165,9 +174,9 @@ def build_figures(dataframe, X):
     fig_word_cloud = build_word_cloud(all_words)
     # return fig_word_cloud, fig_top_words, fig_cluster
     return fig_word_cloud, fig_top_words, []
-
-
 # --------------------------------------------------------------------------------------------------------------------
+
+
 def render_header():
     st.title("Sygnały Miner")
     st.caption("Baseline NLP clustering with CountVectorizer + KMeans")
